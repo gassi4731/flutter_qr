@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_qr/qrcode_reader.dart';
 import 'qrcode_generate.dart';
 
 void main() {
@@ -59,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return QrcodeGenerate(_textEditingController.text);
+                      return QrCodeGenerate(_textEditingController.text);
                     },
                   ),
                 );
@@ -69,7 +70,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return QrCodeReader();
+          }));
+        },
+      ),
     );
   }
 }
-

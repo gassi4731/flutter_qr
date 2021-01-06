@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class QrcodeGenerate extends StatelessWidget {
-  const QrcodeGenerate(this.data);
+class QrCodeGenerate extends StatelessWidget {
+  const QrCodeGenerate(this.data);
   final String data;
 
   @override
