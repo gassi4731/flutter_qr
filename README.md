@@ -16,4 +16,15 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## pub
-QRコード生成 [qr_flutter 3.2.0](https://pub.dev/packages/qr_flutter)
+### QRコード生成
+[qr_flutter: ^3.2.0](https://pub.dev/packages/qr_flutter). 
+### QRコード読み込み
+[qrcode_reader: ^0.4.4](https://pub.dev/packages/qrcode_reader)
+#### 注意点
+iOSで実行する場合は、カメラへのアクセスリクエストが必要になる。（[ソース](https://github.com/bcko/flutter_qrcode_reader/issues/43)）
+info.pilotに
+```
+<key>NSCameraUsageDescription</key>
+<string>Camera permission is required for barcode scanning.</string>
+```
+を書いてから実行する。
