@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_flutter/qr_flutter.dart';
+import 'qrcode_generate.dart';
 
 void main() {
   runApp(MyApp());
@@ -73,29 +73,3 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class QrcodeGenerate extends StatelessWidget {
-  const QrcodeGenerate(this.data);
-  final String data;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Qrcode Generate'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            QrImage(
-              data: data,
-              version: QrVersions.auto,
-              size: 200,
-            ),
-            Text(data, textAlign: TextAlign.center)
-          ],
-        ),
-      ),
-    );
-  }
-}
