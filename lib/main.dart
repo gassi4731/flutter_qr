@@ -71,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.camera_alt_outlined),
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
             return QrCodeReader();
